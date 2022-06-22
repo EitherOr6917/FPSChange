@@ -30,11 +30,12 @@ while True:
         print('Invalid filepath.')
 
 output_name = format_filename(input('Please enter output filename: '))
-video_output_path = path.dirname(video_input_path) + output_name
+video_output_path = path.dirname(video_input_path) + '\\' + output_name + '.mp4'
 
 while True:
     newFPS = input('Enter new video FPS: ')
     if newFPS.isdigit():
+        newFPS = int(newFPS)
         break
     else:
         print('Invalid FPS, make sure you enter a valid integer.')
